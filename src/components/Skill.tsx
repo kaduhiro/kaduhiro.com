@@ -67,7 +67,7 @@ const Skill: VFC<SkillProps> = ({}) => {
               </div>
               <h6 className="text-4xl font-bold text-blue-900">{active.year}</h6>
               <p className="mb-2 font-bold text-md">Years</p>
-              <p className="font-code text-gray-700">{active.skill}</p>
+              <p className="text-gray-700">{active.skill}</p>
             </div>
           );
         })}
@@ -77,7 +77,7 @@ const Skill: VFC<SkillProps> = ({}) => {
           <div className="flex flex-col sm:flex-row justify-between items-center bg-gray-100 rounded-lg gap-4 p-4 md:p-8">
             <div>
               <h2 className="text-blue-500 text-xl md:text-xl font-bold">パッシブスキル</h2>
-              <p className="font-code text-gray-500">C | C++ | Java | Python | Ruby | Ruby on Rails</p>
+              <p className="text-gray-500">C | C++ | Java | Python | Ruby | Ruby on Rails</p>
             </div>
             <Button color="inherit" aria-describedby={id} variant="contained" onClick={handleClick}>
               what is passive ?

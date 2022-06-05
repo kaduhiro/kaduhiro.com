@@ -5,7 +5,6 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        code: ['Consolas'],
         nes: ["'Press Start 2P'"],
       },
       zIndex: {
