@@ -1,0 +1,46 @@
+name: GitHub Pages
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      # ソースコードのチェックアウト
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      # Node.jsのインストール
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 16.x
+
+      # パッケージのインストール
+      - name: Install packages
+        run: npm install --frozen-lockfile
+
+      # カスタムドメインを使用しない場合、静的ファイルのルートを変更
+      - name: Build Next.js
+        run: npm run build
+        #env:
+        # - URL_PREFIX: /repository 
+
+      # outディレクトリの作成
+      - name: Export Next.js
+        run: npm run export
+
+      # _から始めるディレクトリの有効化
+      - name: Add nojekyll
+        run: touch ./out/.nojekyll
+
+      # GitHub Pagesにデプロイ
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./out
