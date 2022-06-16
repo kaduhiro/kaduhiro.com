@@ -38,6 +38,10 @@ jobs:
       - name: Add nojekyll
         run: touch ./out/.nojekyll
 
+      # カスタムドメインの設定を追加
+      - name: Add custom domain
+        run: echo kaduhiro.com > ./out/CNAME
+
       # GitHub Pagesにデプロイ
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
