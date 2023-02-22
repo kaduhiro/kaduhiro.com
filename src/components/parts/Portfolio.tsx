@@ -129,8 +129,6 @@ export const Portfolio = () => {
                       </button>
                     );
                   })}
-
-                  {/* <hr className="my-6 border-gray-200 dark:border-gray-600" /> */}
                 </nav>
               </div>
             </div>
