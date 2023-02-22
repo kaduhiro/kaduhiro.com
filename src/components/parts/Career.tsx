@@ -1,4 +1,3 @@
-import {} from '@fortawesome/free-brands-svg-icons';
 import { faBuilding, faChartLine, faUserSecret } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Element as ScrollElement } from 'react-scroll';
