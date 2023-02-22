@@ -144,7 +144,7 @@ export const Portfolio = () => {
                     <div key={service.title} className='animate-fade-in-top'>
                       <Link href={service.url} target='_blank'>
                         <img
-                          className='h-64 rounded-lg border-2 object-cover duration-200 hover:opacity-60'
+                          className='h-64 w-full rounded-lg border-2 object-cover duration-200 hover:opacity-60'
                           src={service.image}
                           alt='image'
                         />

@@ -27,11 +27,11 @@ export const Career = () => {
     <>
       <ScrollElement name='career' className='container mx-auto px-6 py-24'>
         <h1 className='text-3xl font-semibold capitalize text-gray-800 dark:text-white lg:text-4xl'>Career</h1>
-        <div className='flex-wrap items-stretch justify-center gap-8 py-10 text-center sm:flex'>
+        <div className='flex flex-wrap items-stretch justify-center gap-8 py-10 text-center'>
           {careers.map((career, _) => {
             return (
               <div
-                className='w-full rounded-lg bg-white p-4 shadow-lg duration-500 hover:scale-110 dark:bg-gray-800 sm:w-1/2 md:w-1/2 lg:w-1/4'
+                className='rounded-lg bg-white p-4 shadow-lg duration-500 hover:scale-110 dark:bg-gray-800 sm:w-1/2 md:w-1/2 lg:w-1/4'
                 key={career.title}
               >
                 <div className='shrink-0'>
