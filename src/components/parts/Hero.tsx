@@ -145,8 +145,7 @@ export const Hero = () => {
 
             <div className='mt-10 flex w-full items-center justify-center lg:mt-0 lg:w-1/2'>
               <img
-                width={480}
-                className='h-auto max-w-xl rounded-lg shadow-xl dark:shadow-gray-800'
+                className='w-full max-w-xl rounded-lg shadow-xl dark:shadow-gray-800'
                 src='/img/kaduhiro.svg'
                 alt='kaduhiro'
               />
