@@ -3,6 +3,8 @@ import { useMemo, useState } from 'react';
 import _ from 'lodash';
 import Link from 'next/link';
 
+import { Img } from '@/components/elements';
+
 type PortfolioCategoryName = 'all' | 'tweaks' | 'web applications';
 
 type PortfolioCategoryService = {
@@ -141,7 +143,7 @@ export const Portfolio = () => {
                   return (
                     <div key={service.title} className='animate-fade-in-top'>
                       <Link href={service.url} target='_blank'>
-                        <img
+                        <Img
                           className='h-64 w-full rounded-lg border-2 object-cover duration-200 hover:opacity-60'
                           src={service.image}
                           alt='image'

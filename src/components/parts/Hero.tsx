@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { Button as ScrollButton, Link as ScrollLink } from 'react-scroll';
 import { useRecoilState } from 'recoil';
 
-import { Theme } from '@/components/elements';
+import { Img, Theme } from '@/components/elements';
 import { IconLogo } from '@/components/elements/icon';
 import { popupState } from '@/states';
 
@@ -144,7 +144,7 @@ export const Hero = () => {
             </div>
 
             <div className='mt-10 flex w-full items-center justify-center lg:mt-0 lg:w-1/2'>
-              <img
+              <Img
                 className='w-full max-w-xl rounded-lg shadow-xl dark:shadow-gray-800'
                 src='/img/kaduhiro.svg'
                 alt='kaduhiro'
