@@ -8,7 +8,7 @@ import { Img } from '@/components/elements';
 type PortfolioCategoryName = 'all' | 'tweaks' | 'web applications';
 
 type PortfolioCategoryService = {
-  image: string;
+  image?: string;
   url: string;
   title: string;
   description: string;
@@ -24,7 +24,6 @@ const categories: PortfolioCategory[] = [
     name: 'tweaks',
     services: [
       {
-        image: '/img/no_image.png',
         url: 'https://github.com/kaduhiro/dotapps',
         title: 'dotapps',
         description:
@@ -36,14 +35,12 @@ const categories: PortfolioCategory[] = [
     name: 'web applications',
     services: [
       {
-        image: '/img/no_image.png',
         url: 'https://github.com/kaduhiro/chat-ai',
         title: 'ChatAI',
         description:
           'AIとのチャットができるWebアプリケーション。最先端のテクノロジーで、あなたのリクエストに瞬時に対応。情報検索からカジュアルトークにも対応。',
       },
       {
-        image: '/img/no_image.png',
         url: 'https://175.jp',
         title: '175 | 投資アドバイザー',
         description:
@@ -145,7 +142,7 @@ export const Portfolio = () => {
                       <Link href={service.url} target='_blank'>
                         <Img
                           className='h-64 w-full rounded-lg border-2 object-cover duration-200 hover:opacity-60'
-                          src={service.image}
+                          src={service.image ?? '/img/no_image.png'}
                           alt='image'
                         />
                       </Link>
