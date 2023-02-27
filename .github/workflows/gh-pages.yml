@@ -27,6 +27,8 @@ jobs:
 
       - name: Build Next.js
         run: yarn build
+        env:
+          NEXT_PUBLIC_GA_ID: ${{ vars.NEXT_PUBLIC_GA_ID }}
 
       - name: Export Next.js
         run: yarn export
